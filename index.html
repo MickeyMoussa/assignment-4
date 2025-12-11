@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio site showcasing projects, writing, and API-powered updates.">
+  <title>Andrew-inspired Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+        <header class="site-header">
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#api-feed">Live</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn ghost" id="theme-toggle" aria-label="Toggle theme">Theme</button>
+        <button class="btn primary" id="cta-button">Let's talk</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Hi, I’m <span class="accent">Yazeed</span>. I'm a CS student @ KFUPM.</h1>
+          <p class="lede">
+            I made a major renovation to my portfolio site, primarily inspired by the AI Legened Andrew Ng's portfolio. It now features a sleek design, curated projects, and live API-powered updates.
+          </p>
+          <div class="hero-actions">
+            <button class="btn primary" id="primary-cta">View selected work</button>
+            <a class="btn ghost" id="download-cv" href="assets/YazeedFarisCVEY.pdf" download>Download CV</a>
+          </div>
+          <div class="live-meta">
+            <span id="visit-timer">Time here: 0s</span>
+            <span>·</span>
+            <span id="greeting">Welcome, guest.</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait" aria-hidden="true" style="background-image: url('assets/images/profile.png');"></div>
+          <div class="card">
+            <p class="card-title">POC</p>
+            <div class="card-links">
+              <a class="link-pill" href="https://github.com/MickeyMoussa" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/githubIcon.svg" alt="" class="icon-16">GitHub
+              </a>
+              <a class="link-pill" href="https://www.linkedin.com/in/yazeed-faris-418076254" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/LinkedInIcon.png" alt="" class="icon-16">LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="panel">
+        <div class="panel-head">
+          <p class="eyebrow">About</p>
+          <h2>Quantifying risk, optimizing decisions</h2>
+        </div>
+        <div class="panel-body grid">
+          <div>
+            <p>
+              Outside of university, I actively pursue an Associate of the Society of Actuaries (ASA) accreditation. This journey hones my skills in risk assessment, data analysis, and statistical modeling.
+ 
+            </p>
+            <p>
+              Blending machine learning with actuarial science, I aim to quantify businesses' approach risk and decision-making. My passion lies in creating innovative solutions that drive efficiency and informed strategies.
+            </p>
+          </div>
+      </section>
+
+      <section id="projects" class="panel">
+        <div class="panel-head">
+          <p class="eyebrow">Projects</p>
+          <h2>Some of my Work</h2>
+        </div>
+        <div class="controls">
+          <label>
+            Filter:
+            <select id="project-filter">
+              <option value="all">All</option>
+              <option value="ai">AI</option>
+              <option value="web">Web</option>
+              <option value="hardware">Hardware</option>
+            </select>
+          </label>
+          <label>
+            Sort:
+            <select id="project-sort">
+              <option value="recent">Most Recent</option>
+              <option value="alpha">Alphabetical</option>
+            </select>
+          </label>
+          <button class="btn secondary" id="toggle-projects">Hide projects</button>
+        </div>
+        <div id="project-list" class="card-grid"></div>
+      </section>
+
+      <section id="api-feed" class="panel">
+        <div class="panel-head">
+          <p class="eyebrow">Live feed</p>
+          <h2>Latest GitHub activity.</h2>
+        </div>
+        <p class="status-text">check out my latest work in GitHub @ <strong>MickeyMoussa</strong></p>
+        <p class="status-text">This section is now auto-fetching my latest public repositories at live time </p>
+        <div id="repo-list" class="card-grid"></div>
+        <p id="repo-status" class="status-text" role="status">Ready to fetch.</p>
+      </section>
+
+      <section id="contact" class="panel contact">
+        <div class="panel-head">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s collaborate.</h2>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="field-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <p class="error" id="name-error"></p>
+          </div>
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="error" id="email-error"></p>
+          </div>
+          <div class="field-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <p class="error" id="message-error"></p>
+          </div>
+          <div class="field-inline">
+            <label>
+              <input type="checkbox" id="consent">
+              I agree to be contacted back.
+            </label>
+          </div>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="status-text" id="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+          <p class="footer-title">Thanks for visiting.</p>
+          <div class="card-links">
+            <a class="link-pill" href="https://github.com/MickeyMoussa" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/githubIcon.svg" alt="" class="icon-16">GitHub
+            </a>
+            <a class="link-pill" href="https://www.linkedin.com/in/yazeed-faris-418076254" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/LinkedInIcon.png" alt="" class="icon-16">LinkedIn
+            </a>
+            <a class="link-pill" href="assets/YazeedFarisCVEY.pdf" download>CV</a>
+          </div>
+        </div>
+        <p class="footer-meta">&copy; 2025 Yazeed Faris</p>
+      </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
