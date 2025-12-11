@@ -2,7 +2,7 @@
 
 ## Deployment
 This project is now running at <a ref="https://assignment-4-ob3u9fvj7-mickeymoussas-projects.vercel.app/#api-feed">https://assignment-4-ob3u9fvj7-mickeymoussas-projects.vercel.app/#api-feed</a>
-and <a ref="https://mickeymoussa.github.io/assignment-4/>https://mickeymoussa.github.io/assignment-4/"</a>
+and <a ref="https://mickeymoussa.github.io/assignment-4"/>https://mickeymoussa.github.io/assignment-4/</a>
 
 ## Features
 - GitHub API feed fetches data from @MickeyMoussa about the last 5 repos
