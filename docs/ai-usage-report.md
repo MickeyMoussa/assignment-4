@@ -1,5 +1,15 @@
 # AI Usage Report
+# AI Integration
 
+## Styling
+Was given total responsibility for styling and applying Google Fonts to the project to ensure a sleek and aesthetic interface.
+
+## Error Handling
+Assisted in brainstorming different error‑handling approaches for potential error patterns.
+
+## Regex
+Helped debug RegEx issues to ensure robust input validation in the form.
+# some prompts
 ## Tools
 - ChatGPT 
 
