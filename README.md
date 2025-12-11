@@ -1,5 +1,7 @@
 # Portfolio — Assignment 4
 
+## Deployment
+This project is now running at <a ref="https://assignment-4-ob3u9fvj7-mickeymoussas-projects.vercel.app/#api-feed">https://assignment-4-ob3u9fvj7-mickeymoussas-projects.vercel.app/#api-feed</a>
 
 ## Features
 - GitHub API feed fetches data from @MickeyMoussa about the last 5 repos
